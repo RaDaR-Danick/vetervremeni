@@ -1,0 +1,196 @@
+.productInfo {
+    padding: 4rem 0;
+
+    .inner {
+        display: flex;
+        justify-content: space-between;
+
+        .image {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-height: 70rem;
+            padding-left: 8rem;
+
+            &.bordered {
+                border: 1px solid var(--border);
+                border-radius: var(--rad);
+                padding: 3rem;
+            }
+
+            &.greyBg {
+                background: var(--grey-bg);
+                border-radius: var(--rad-large);
+                padding: 4rem;
+            }
+
+            img {
+                max-height: 100%;
+            }
+
+            .noImage {
+                display: flex;
+                font-size: 22rem;
+                color: var(--border);
+            }
+
+        }
+
+        .content {
+            padding: 5rem 8rem;
+            width: 50%;
+
+            hr {
+                margin: 3rem 0;
+            }
+
+            .subtitle {
+                margin-bottom: 0.8rem;
+            }
+
+            .header {
+
+                .brand {
+                    color: var(--theme);
+                    text-decoration: none;
+
+                    &:hover {
+                        color: var(--theme-dark);
+                    }
+
+                }
+
+                .title {
+                    margin-bottom: 0.5rem;
+                }
+
+                .meta {
+                    display: flex;
+
+                    .metaItem {
+                        color: var(--text-grey);
+
+                        span {
+                            color: var(--theme);
+                        }
+
+                    }
+
+                    &>*:not(:last-child) {
+                        margin-right: 1.5rem;
+                    }
+
+                }
+
+            }
+
+            .priceBlock {
+
+                .orderBlock {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 1.5rem;
+
+                    &>*:not(:last-child) {
+                        margin-right: 3rem;
+                    }
+
+                    .price {
+                        font-size: var(--h3);
+                        line-height: 1;
+                        font-weight: 600;
+
+                        .top {
+                            display: flex;
+                            align-items: center;
+                            margin-bottom: 0.4rem;
+
+                            .tag {
+                                background: var(--theme);
+                                color: #fff;
+                                line-height: 1;
+                                border-radius: var(--rad-smaller);
+                                padding: 0.6rem;
+                                font-size: var(--fz-smaller);
+                                font-weight: 500;
+                                margin-right: 0.6rem;
+                            }
+
+                        }
+
+                        .oldPrice {
+                            display: block;
+                            font-size: 0.5em;
+                            margin-bottom: 0.1em;
+                            color: var(--text-grey-light);
+                            text-decoration: line-through;
+                            font-weight: 500;
+                        }
+
+                        &.small {
+                            font-size: var(--h5);
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .productInfo {
+
+        .inner {
+            display: block;
+
+            .image {
+                width: 100%;
+                padding-left: 0;
+                margin-bottom: 3rem;
+                height: 40rem;
+            }
+
+            .content {
+                padding: 0;
+                width: 100%;
+            }
+
+        }
+
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+
+    .productInfo {
+
+        .inner {
+            display: block;
+
+            .image {
+                width: 100%;
+                padding-left: 0;
+                margin-bottom: 3rem;
+            }
+
+            .content {
+                padding: 0;
+                width: 100%;
+            }
+
+        }
+
+    }
+
+}
+
+@media (min-width: 1200px) and (max-width: 1300px) {}

@@ -1,0 +1,28 @@
+.archiveSort {
+    display: flex;
+    align-items: center;
+
+    .button {
+        display: none;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .archiveSort {
+
+        .select {
+            flex-grow: 1;
+            margin-right: 1.5rem;
+            padding-right: 1.5rem;
+            border-right: 1px solid var(--border);
+        }
+
+        .button {
+            display: block;
+        }
+
+    }
+
+}

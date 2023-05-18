@@ -1,0 +1,50 @@
+.nav {
+    border: 1px solid var(--border);
+    border-radius: var(--rad);
+    padding: 1rem 0;
+    background: var(--field-bg);
+
+    ul {
+        list-style: none;
+
+        li {
+
+            a {
+                display: block;
+                color: var(--text);
+                text-decoration: none;
+                padding: 0.6rem 2rem;
+                transition: 0.2s;
+                position: relative;
+
+                &:hover {
+                    background: var(--grey-bg);
+                }
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    left: -1px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    height: 0;
+                    width: 4px;
+                    background: var(--theme);
+                    border-radius: 0 4px 4px 0;
+                }
+
+                &.activeNavLink {
+
+                    &:before {
+                        height: 100%;
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}

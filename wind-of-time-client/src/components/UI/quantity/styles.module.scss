@@ -1,0 +1,74 @@
+.quantity {
+    position: relative;
+    width: 100%;
+    --padding: 1px;
+
+    .btn {
+        --size: calc(var(--field) - (var(--padding) * 2));
+        position: absolute;
+        z-index: 2;
+        top: var(--padding);
+        font-size: 1.3em;
+        border: none;
+        background: none;
+        cursor: pointer;
+        transition: 0.2s;
+        height: var(--size);
+        width: var(--size);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        background: var(--bg);
+        border-radius: calc(var(--rad) - var(--padding));
+        color: var(--text);
+        font-weight: 400;
+
+        &:hover {
+            color: var(--theme);
+        }
+
+        &:first-child {
+            left: var(--padding);
+        }
+
+        &:last-child {
+            right: var(--padding);
+        }
+
+    }
+
+    .input {
+        text-align: center;
+        width: 100%;
+        border: none;
+        height: var(--field);
+        background: var(--border);
+        outline: none;
+        border-radius: var(--rad);
+        appearance: none;
+        font-size: 1em;
+        padding: 0;
+    }
+
+    &.smaller {
+        --field: var(--field-smaller);
+        font-size: var(--fz-smaller);
+    }
+
+    &.small {
+        --field: var(--field-small);
+        font-size: var(--fz-small);
+    }
+
+    &.larger {
+        --field: var(--field-larger);
+        font-size: var(--fz-larger);
+    }
+
+    &.large {
+        --field: var(--field-large);
+        font-size: var(--fz-large);
+    }
+
+}

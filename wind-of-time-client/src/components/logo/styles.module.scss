@@ -1,0 +1,46 @@
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: var(--logo);
+    line-height: 1;
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 600;
+    transform: translateY(8%);
+
+    .logoSvg {
+        display: flex;
+        
+        svg {
+            width: calc(var(--logo) * 2);
+            fill: var(--theme);
+
+            .bg {
+                fill: var(--bg);
+            }
+
+        }
+
+    }
+    
+}
+
+.smallLogo {
+    display: flex;
+    align-items: center;
+
+    svg {
+        width: var(--field);
+        fill: var(--theme);
+        transition: 0.2s;
+    }
+
+    &:hover {
+
+        svg {
+            fill: var(--theme-dark);
+        }
+
+    }
+
+}

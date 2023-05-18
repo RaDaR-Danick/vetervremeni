@@ -1,0 +1,40 @@
+.block {
+    text-align: center;
+    --size: 0px;
+    line-height: 1;
+    color: var(--text-grey);
+}
+
+.icon {
+    font-size: calc(var(--size) * 5);
+    margin-bottom: 0.1em;
+}
+
+.text {
+    font-weight: 600;
+    font-size: calc(var(--size) * 1.2);
+}
+
+.large {
+    --size: var(--fz-large);
+}
+
+.larger {
+    --size: var(--fz-larger);
+}
+
+.primary {
+    --size: var(--fz);
+}
+
+.smaller {
+    --size: var(--fz-smaller);
+}
+
+.small {
+    --size: var(--fz-small);
+}
+
+.padding {
+    padding: calc(var(--size) * 2) 0;
+}

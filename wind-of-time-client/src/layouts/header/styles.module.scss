@@ -1,0 +1,209 @@
+.header {
+    position: relative;
+    z-index: 34;
+    background: var(--bg);
+}
+
+.topHeader {
+    border-bottom: 1px solid var(--border);
+
+    .topHeaderInner {
+        height: var(--top-header);
+        display: flex;
+        align-items: center;
+    
+        .logoWrapper {
+            margin-right: 3.5rem;
+        }
+    
+        .citySelectWrapper {
+            margin-right: 1rem;
+        }
+    
+        .searchInputWrapper {
+            width: 0;
+            flex-grow: 1;
+        }
+    
+        .contacts {
+            margin: 0 3.5rem;    
+        }
+    
+        .rightBlock {
+            display: flex;
+            align-items: center;
+    
+            & > *:not(:last-child) {
+                margin-right: 2rem;
+            }
+    
+        }
+    
+    }
+
+}
+
+.bottomHeader {
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    z-index: 32;
+    background: var(--bg-opacity);
+    backdrop-filter: blur(var(--blur));
+    top: 0;
+
+    .bottomHeaderInner {
+        height: var(--bottom-header);
+        display: flex;
+        align-items: center;
+    
+        .bottomHeaderLogo {
+            transition: 0.5s;
+            opacity: 0;
+            width: 0;
+    
+            &.showLogo {
+                width: var(--field);
+                opacity: 1;
+                margin-right: 4rem;
+            }
+    
+        }
+    
+        nav {
+            align-self: stretch;
+            margin-bottom: -1px;
+    
+            ul {
+                height: 100%;
+                display: flex;
+    
+                li {
+                    display: flex;
+    
+                    &:not(:last-child) {
+                        margin-right: 4rem;
+                    }
+    
+                    a {
+                        display: flex;
+                        align-items: center;
+                        text-decoration: none;
+                        color: var(--text);
+                        font-weight: 500;
+                        transition: 0.3s;
+                        position: relative;
+    
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            left: 50%;
+                            bottom: 0;
+                            height: 4px;
+                            background: var(--theme);
+                            border-radius: 3px 3px 0 0;
+                            transition: 0.3s;
+                            width: 0;
+                            transform: translateX(-50%);
+                        }
+    
+                        &:hover {
+                            color: var(--theme);
+                        }
+    
+                        &.activeNavLink:after {
+                            width: 100%;
+                        }
+    
+                    }
+    
+                }
+    
+            }
+    
+        }
+    
+        .cartBtnWrapper {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+        }
+    
+    }
+
+}
+
+.mobileHeader {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 32;
+    background: var(--bg-opacity);
+    backdrop-filter: blur(var(--blur));
+    border-bottom: 1px solid var(--border);
+    display: none;
+
+    .mobileHeaderInner {
+        height: var(--bottom-header);
+        display: flex;
+        align-items: center;
+
+        .menuBtnWrapper {
+            margin-right: 2rem;
+        }
+
+        .rightBlock {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+
+            & > *:not(:last-child) {
+                margin-right: 1rem;
+            }
+
+        }
+
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .header {
+        display: none;
+    }
+
+    .bottomHeader {
+        display: none;
+    }
+
+    .mobileHeader {
+        display: block;
+
+        .mobileHeaderInner {
+
+            .selectCityWrapper {
+                display: none;
+            }
+
+        }
+
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+
+    .header {
+        display: none;
+    }
+
+    .bottomHeader {
+        display: none;
+    }
+
+    .mobileHeader {
+        display: block;
+    }
+
+}

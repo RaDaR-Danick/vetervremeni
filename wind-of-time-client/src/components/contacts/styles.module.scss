@@ -1,0 +1,31 @@
+.contacts {
+    line-height: 1;
+    
+    a {
+        text-decoration: none;
+        display: block;
+        transition: 0.2s;
+    }
+
+    .contactsPhone {
+        color: var(--text);
+        font-weight: 600;
+        font-size: 2rem;
+        margin-bottom: 0.15em;
+
+        &:hover {
+            color: var(--theme);
+        }
+
+    }
+
+    .contactsEmail {
+        color: var(--text-grey);
+
+        &:hover {
+            color: var(--theme);
+        }
+
+    }
+
+}

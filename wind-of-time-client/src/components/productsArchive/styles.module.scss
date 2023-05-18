@@ -1,0 +1,201 @@
+.archive {
+    padding: 4rem 0;
+
+    .toggleFilters {
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        height: var(--field-large);
+        width: var(--field-large);
+        z-index: 30;
+        background: var(--field-bg);
+        border: 1px solid var(--field-border);
+        border-radius: 0 var(--rad) var(--rad) 0;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.6rem;
+        transition: 0.2s;
+        display: none;
+
+        &:hover {
+            color: var(--theme);
+        }
+
+    }
+
+    .inner {
+        display: flex;
+
+        .sidebar {
+            width: 23%;
+            padding-right: 4rem;
+
+            .mobileFiltersHeader {
+                display: none;
+            }
+
+        }
+
+        .body {
+            width: 77%;
+
+            .productsGrid {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-gap: 4rem 2rem;
+            }
+
+            .loadMoreWrapper {
+                display: flex;
+                justify-content: center;
+                margin-top: 4rem;
+            }
+
+        }
+
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .archive {
+
+        .toggleFilters {
+            display: flex;
+        }
+
+        .inner {
+            display: block;
+
+            .sidebar {
+                width: 100%;
+                padding: 0;
+
+                .mobileFilters {
+                    position: fixed;
+                    z-index: 30;
+                    top: var(--bottom-header);
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: var(--bg-opacity);
+                    backdrop-filter: blur(var(--blur));
+                    display: flex;
+                    flex-direction: column;
+
+                    &:not(.show) {
+                        display: none;
+                    }
+
+                    .mobileFiltersHeader {
+                        border-bottom: 1px solid var(--border);
+                        display: block;
+
+                        .mobileFiltersHeaderInner {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            height: var(--bottom-header);
+                        }
+
+                    }
+
+                    .mobileFiltersBody {
+                        padding: 4rem 0;
+                        height: 0;
+                        flex-grow: 1;
+                        overflow: auto;
+                    }
+
+                }
+
+            }
+
+            .body {
+                width: 100%;
+
+                .productsGrid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+
+    .archive {
+
+        .toggleFilters {
+            display: flex;
+        }
+
+        .inner {
+            display: block;
+
+            .sidebar {
+                width: 100%;
+                padding: 0;
+
+                .mobileFilters {
+                    position: fixed;
+                    z-index: 30;
+                    top: var(--bottom-header);
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: var(--bg-opacity);
+                    backdrop-filter: blur(var(--blur));
+                    display: flex;
+                    flex-direction: column;
+
+                    &:not(.show) {
+                        display: none;
+                    }
+
+                    .mobileFiltersHeader {
+                        border-bottom: 1px solid var(--border);
+                        display: block;
+
+                        .mobileFiltersHeaderInner {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            height: var(--bottom-header);
+                        }
+
+                    }
+
+                    .mobileFiltersBody {
+                        padding: 4rem 0;
+                        height: 0;
+                        flex-grow: 1;
+                        overflow: auto;
+                    }
+
+                }
+
+            }
+
+            .body {
+                width: 100%;
+
+                .productsGrid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+
+            }
+
+        }
+
+    }
+
+}

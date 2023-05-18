@@ -1,0 +1,29 @@
+.sliderWrapper {
+
+    .inputs {
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+
+        & > *:not(.inputsSep) {
+            width: 0;
+            flex-grow: 1;
+        }
+
+        .inputsSep {
+            margin: 0 0.4rem;
+        }
+
+    }
+
+    .labels {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        line-height: 1;
+        font-size: var(--fz-smaller);
+        color: var(--text-grey);
+        margin-top: 1rem;
+    }
+
+}

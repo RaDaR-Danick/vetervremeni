@@ -1,0 +1,146 @@
+.section {
+    overflow: hidden;
+    border: solid var(--border);
+    border-width: 1px 0;
+
+    &.top {
+        border-width: 1px 0 0 0;
+    }
+
+    &.bottom {
+        border-width: 0 0 1px 0;
+    }
+
+    &.none {
+        border: none;
+    }
+
+    .inner {
+        position: relative;
+        display: flex;
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: fit-content;
+            padding: 10rem;
+            text-align: center;
+
+            .subtitle {
+                color: var(--theme);
+            }
+    
+            .title {
+                font-weight: 600;
+                line-height: 1.3;
+                font-size: var(--h3);
+                margin-bottom: 0.2em;
+            }
+    
+            .text {
+                font-size: var(--fz-large);
+                color: var(--text-grey);
+                margin-bottom: 0.8em;
+            }    
+
+        }
+
+        .image {
+            width: 0;
+            flex-grow: 1;
+            position: relative;
+
+            svg {
+                position: absolute;
+                left: 18%;
+                bottom: 15%;
+                height: 70%;
+                transform: rotate(-15deg);
+                fill: var(--text-grey);
+            }
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+                z-index: 2;
+            }
+
+        }
+
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .section {
+
+        .inner {
+
+            .content {
+                padding: 10rem 0;
+                width: 100%;
+                position: relative;
+                z-index: 2;
+            }
+
+            .image {
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin-top: 0;
+                margin-bottom: 0;
+                top: 0;
+                bottom: 0;
+                width: 100%;
+                filter: grayscale(1) contrast(1.5);
+                opacity: 0.07;
+
+                svg {
+                    display: none;
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+
+    .section {
+
+        .inner {
+
+            .content {
+                padding: 10rem 0;
+                width: 100%;
+                position: relative;
+                z-index: 2;
+            }
+
+            .image {
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin-top: 0;
+                margin-bottom: 0;
+                top: -4rem;
+                bottom: -6rem;
+                width: 100%;
+                filter: grayscale(1) contrast(1.5);
+                opacity: 0.07;
+            }
+
+        }
+
+    }
+
+}

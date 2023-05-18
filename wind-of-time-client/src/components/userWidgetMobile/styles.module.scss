@@ -1,0 +1,70 @@
+.userBlock {
+    border-radius: var(--rad);
+    border: 1px solid var(--border);
+    background: var(--bg);
+    overflow: hidden;
+
+    & > *:not(:last-child) {
+        border-bottom: 1px solid var(--border);
+    }
+
+    .user {
+        padding: 1.5rem 2rem;
+        display: flex;
+        align-items: center;
+
+        .icon {
+            display: flex;
+            color: var(--theme);
+            font-size: 4.5rem;
+            margin-right: 1rem;
+        }
+
+        .text {
+            line-height: 1;
+            width: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            flex-grow: 1;
+            margin-right: 2rem;
+
+            & > * {
+                text-overflow: ellipsis;
+            }
+
+            .name {
+                font-weight: 600;
+                font-size: var(--fz-larger);
+                margin-bottom: 0.6rem;
+            }
+
+            .email {
+                color: var(--text-grey);
+                font-size: var(--fz-smaller);
+            }
+
+        }
+
+    }
+
+    .item {
+        text-decoration: none;
+        color: var(--text);
+        padding: 1.5rem 2rem;
+        transition: 0.2s;
+        display: flex;
+        align-items: center;
+
+        .icon {
+            display: flex;
+            font-size: 1.3em;
+            margin-right: 1rem;
+            color: var(--theme);
+        }
+
+        &:hover {
+            color: var(--theme);
+        }
+    }
+
+}

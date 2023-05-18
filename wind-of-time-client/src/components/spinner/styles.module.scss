@@ -1,0 +1,49 @@
+.spinner {
+    --size: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.padding {
+    padding: var(--size) 0;
+}
+
+@keyframes spinner {
+    from {
+        transform: none;
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.inner {
+    border: 5px solid var(--border);
+    border-right: 5px solid var(--text-grey);
+    width: calc(var(--size) * 2);
+    height: calc(var(--size) * 2);
+    border-radius: 100%;
+    animation: spinner 0.5s infinite linear;
+}
+
+.large {
+    --size: var(--field-large);
+}
+
+.larger {
+    --size: var(--field-larger);
+}
+
+.primary {
+    --size: var(--field);
+}
+
+.smaller {
+    --size: var(--field-smaller);
+}
+
+.small {
+    --size: var(--field-small);
+}

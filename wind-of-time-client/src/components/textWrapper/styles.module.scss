@@ -1,0 +1,92 @@
+.textWrapper {
+    --h1: 2.8rem;
+    --h2: 2.6rem;
+    --h3: 2.4rem;
+    --h4: 2.2rem;
+    --h5: 2rem;
+    --h6: 1.8rem;
+
+    a {
+        color: var(--theme);
+        text-decoration: none;
+        position: relative;
+        z-index: 1;
+        border-radius: var(--rad-small);
+        cursor: pointer;
+        transition: 0.2s;
+        padding: 3px;
+        margin: -3px;
+    
+        &:hover {
+            color: var(--theme-dark);
+        }
+    
+        &:active,
+        &:focus {
+            background: var(--theme-opacity);
+            box-shadow: 0 0 0 4px var(--theme-focus);
+        }
+        
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        
+        &:not(:first-child) {
+            margin-top: 1em;
+        }
+
+    }
+
+    & > *:not(:last-child) {
+        margin-bottom: 1.2rem;
+    }
+
+    ol {
+        padding-left: 2.5rem;
+
+        li {
+
+            &:not(:last-child) {
+                margin-bottom: 0.3em;
+            }
+
+            &::marker {
+                color: var(--text-grey);
+                font-weight: 500;
+            }
+
+        }
+
+    }
+
+    ul {
+        padding-left: 2.5rem;
+
+        li {
+
+            &:not(:last-child) {
+                margin-bottom: 0.3em;
+            }
+
+            &::marker {
+                color: var(--text-grey);
+                font-weight: 500;
+            }
+
+        }
+
+    }
+
+    blockquote {
+        padding: 1rem 0 1rem 2rem;
+        border-left: 3px solid var(--border);
+        font-style: italic;
+        font-weight: 500;
+    }
+
+}

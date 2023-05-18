@@ -1,0 +1,27 @@
+.block {
+    position: relative;
+    z-index: 3;
+
+    &:hover {
+
+        .dropdown {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+    }
+
+}
+
+.dropdown {
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    min-width: 100%;
+    padding: 0.5rem 0;
+    transition: 0.2s;
+    opacity: 0;
+    pointer-events: none;
+}

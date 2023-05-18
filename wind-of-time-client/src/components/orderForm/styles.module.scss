@@ -1,0 +1,23 @@
+.form {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+
+    .full {
+        grid-column-end: span 2;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .form {
+        display: block;
+
+        & > *:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+
+    }
+
+}

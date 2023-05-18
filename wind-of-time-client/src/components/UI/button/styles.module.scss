@@ -1,0 +1,278 @@
+.btn {
+    padding: 0;
+    line-height: 1;
+    background: none;
+    font-weight: 400;
+    font-size: var(--fz);
+    cursor: pointer;
+    transition: 0.3s;
+    overflow: hidden;
+    position: relative;
+    border-radius: var(--rad);
+    border: none;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    outline: none;
+    width: fit-content;
+    color: var(--text);
+    text-decoration: none;
+
+    span {
+        height: var(--field);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 2;
+        transition: transform 0.3s;
+    }
+
+    span.text {
+        padding: 0 calc(var(--field) * 0.5);
+
+        .beforeIcon,
+        .afterIcon {
+            font-size: 1.1em;
+            
+            &:before {
+                font-weight: 500;
+            }
+
+        }
+
+        .beforeIcon {
+            margin-right: 0.3em;
+        }
+
+        .afterIcon {
+            margin-left: 0.3em;
+        }
+
+    }
+
+    span.icon {
+        width: var(--field);
+        font-size: 1.6em;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border: 1px solid transparent;
+        border-radius: inherit;
+        z-index: 2;
+        pointer-events: none;
+        transition: 0.2s;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        height: 0;
+        transition: 0.4s;
+        z-index: 1;
+    }
+
+    &:hover {
+
+        &:before {
+            height: 100%;
+        }
+
+    }
+
+    &:focus {
+        box-shadow: 0 0 0 5px var(--theme-focus);
+
+        &:after {
+            border-color: var(--theme) !important;
+            box-shadow: 0 0 0 1px var(--theme) inset;
+        }
+
+    }
+
+    &:active {
+
+        span {
+            transform: scale(0.95);
+        }
+
+    }
+
+    &.primary {
+        background: var(--theme);
+        color: #fff;
+
+        &:before {
+            background: var(--theme-dark);
+        }
+
+    }
+
+    &.bg {
+        background: var(--bg);
+
+        &:before {
+            background: var(--theme);
+        }
+
+        &:hover {
+            color: #fff;
+        }
+
+    }
+
+    &.outline {
+        background: var(--field-bg);
+
+        &:before {
+            background: var(--grey-bg);
+        }
+
+        &:after {
+            border-color: var(--field-border);
+        }
+
+    }
+
+    &.outlineTheme {
+        background: var(--field-bg);
+        color: var(--theme);
+
+        &:before {
+            background: var(--grey-bg);
+        }
+
+        &:after {
+            border-color: var(--field-border);
+        }
+
+    }
+
+    &.ghost {
+        color: var(--theme);
+
+        &:before {
+            background: var(--theme-opacity);
+        }
+
+    }
+
+    &.opacity {
+        color: var(--theme);
+        background: var(--theme-opacity);
+
+        &:before {
+            background: var(--theme-opacity);
+        }
+
+    }
+
+    &.grey {
+        background: var(--grey-bg);
+
+        &:before {
+            background: var(--border);
+        }
+
+    }
+
+    &.dashed {
+        color: var(--theme);
+
+        &:after {
+            border: 2px dashed var(--border);
+        }
+
+        &:before {
+            background: var(--grey-bg);
+        }
+
+    }
+
+    &:disabled {
+        background: var(--border);
+        color: var(--text-grey) !important;
+        pointer-events: none;
+
+        &:before {
+            height: 0;
+        }
+
+    }
+
+    &.small {
+        --fz: var(--fz-small);
+        --field: var(--field-small);
+    }
+
+    &.smaller {
+        --fz: var(--fz-smaller);
+        --field: var(--field-smaller);
+    }
+
+    &.large {
+        --fz: var(--fz-large);
+        --field: var(--field-large);
+    }
+
+    &.larger {
+        --fz: var(--fz-larger);
+        --field: var(--field-larger);
+    }
+
+    &.full {
+        width: 100%;
+        justify-content: center;
+    }
+
+    @keyframes spinner {
+        from {
+            transform: none;
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    .spinner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:before {
+            content: '';
+            animation: spinner 0.5s infinite linear;
+            display: block;
+            border-radius: 100%;
+            width: 1.2em;
+            height: 1.2em;
+            border: 2px solid var(--text-grey-light);
+            border-right: 2px solid var(--text);
+        }
+
+    }
+
+    &.loading {
+
+        .text,
+        .icon {
+            opacity: 0;
+        }
+
+    }
+
+}

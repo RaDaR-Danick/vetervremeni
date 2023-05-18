@@ -1,0 +1,52 @@
+.pageHeader {
+    border-bottom: 1px solid var(--border);
+    padding: 1rem 0;
+    min-height: 9rem;
+    display: flex;
+    align-items: center;
+
+    .inner {
+        display: flex;
+        align-items: center;
+
+        .title {
+            width: 0;
+            flex-grow: 1;
+
+            span {
+                color: var(--text-grey);
+            }
+
+        }
+
+        .after {
+            margin-left: 5rem;
+        }
+
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .pageHeader {
+        min-height: auto;
+        padding: 2rem 0;
+
+        .inner {
+            display: block;
+
+            .title {
+                width: 100%;
+            }
+
+            .after {
+                margin-left: 0;
+                margin-top: 1rem;
+            }
+
+        }
+
+    }
+
+}

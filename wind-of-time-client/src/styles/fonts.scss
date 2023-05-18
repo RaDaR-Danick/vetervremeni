@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+// @font-face {
+//     font-family: 'Neue Montreal';
+//     src: url('../assets/fonts/NeueMontreal-Medium.eot');
+//     src: local('Neue Montreal Medium'), local('NeueMontreal-Medium'),
+//         url('../assets/fonts/NeueMontreal-Medium.eot?#iefix') format('embedded-opentype'),
+//         url('../assets/fonts/NeueMontreal-Medium.woff2') format('woff2'),
+//         url('../assets/fonts/NeueMontreal-Medium.woff') format('woff'),
+//         url('../assets/fonts/NeueMontreal-Medium.ttf') format('truetype');
+//     font-weight: 500;
+//     font-style: normal;
+// }
+
+// @font-face {
+//     font-family: 'Neue Montreal';
+//     src: url('../assets/fonts/NeueMontreal-Bold.eot');
+//     src: local('Neue Montreal Bold'), local('NeueMontreal-Bold'),
+//         url('../assets/fonts/NeueMontreal-Bold.eot?#iefix') format('embedded-opentype'),
+//         url('../assets/fonts/NeueMontreal-Bold.woff2') format('woff2'),
+//         url('../assets/fonts/NeueMontreal-Bold.woff') format('woff'),
+//         url('../assets/fonts/NeueMontreal-Bold.ttf') format('truetype');
+//     font-weight: bold;
+//     font-style: normal;
+// }
+
+// @font-face {
+//     font-family: 'Neue Montreal';
+//     src: url('../assets/fonts/NeueMontreal-Light.eot');
+//     src: local('Neue Montreal Light'), local('NeueMontreal-Light'),
+//         url('../assets/fonts/NeueMontreal-Light.eot?#iefix') format('embedded-opentype'),
+//         url('../assets/fonts/NeueMontreal-Light.woff2') format('woff2'),
+//         url('../assets/fonts/NeueMontreal-Light.woff') format('woff'),
+//         url('../assets/fonts/NeueMontreal-Light.ttf') format('truetype');
+//     font-weight: 300;
+//     font-style: normal;
+// }
+
+// @font-face {
+//     font-family: 'Neue Montreal';
+//     src: url('../assets/fonts/NeueMontreal-Regular.eot');
+//     src: local('Neue Montreal Regular'), local('NeueMontreal-Regular'),
+//         url('../assets/fonts/NeueMontreal-Regular.eot?#iefix') format('embedded-opentype'),
+//         url('../assets/fonts/NeueMontreal-Regular.woff2') format('woff2'),
+//         url('../assets/fonts/NeueMontreal-Regular.woff') format('woff'),
+//         url('../assets/fonts/NeueMontreal-Regular.ttf') format('truetype');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
+:root {
+    --font: 'Inter', sans-serif;
+}

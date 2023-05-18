@@ -1,0 +1,46 @@
+.block {
+    padding: 6rem 0;
+}
+
+.inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.icon {
+    display: flex;
+    line-height: 1;
+    font-size: 8rem;
+    color: var(--theme);
+    margin-bottom: 1rem;
+
+    &.warning {
+        color: var(--orange);
+    }
+
+    &.error {
+        color: var(--red);
+    }
+
+    &.success {
+        color: var(--green);
+    }
+
+}
+
+.title {
+    line-height: 1.3;
+    font-size: var(--h4);
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+}
+
+.text {
+    color: var(--text-grey);
+}
+
+.btnWrapper {
+    margin-top: 1.5rem;
+}

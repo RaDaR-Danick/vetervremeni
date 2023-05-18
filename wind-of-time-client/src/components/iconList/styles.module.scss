@@ -1,0 +1,21 @@
+.list {
+
+    & > *:not(:last-child) {
+        margin-bottom: 0.4em;
+    }
+
+    .item {
+        display: flex;
+        align-items: center;
+        font-size: var(--fz-smaller);
+        line-height: 1;
+        color: var(--text-grey);
+
+        .icon {
+            margin-right: 0.4em;
+            font-size: 1.3em;
+        }
+
+    }
+
+}

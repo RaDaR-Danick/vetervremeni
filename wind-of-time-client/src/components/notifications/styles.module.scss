@@ -1,0 +1,18 @@
+.notifications {
+    position: fixed;
+    z-index: 999;
+    right: 0;
+    bottom: 0;
+    width: 40rem;
+    padding: 2rem;
+    pointer-events: none;
+
+    & > * {
+        pointer-events: all;
+    }
+
+    & > *:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+
+}

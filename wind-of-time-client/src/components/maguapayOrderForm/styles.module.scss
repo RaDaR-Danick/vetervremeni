@@ -1,0 +1,108 @@
+.section {
+    padding: 4rem 0;
+
+    .formWrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        .form {
+            --padding: 1rem;
+            width: calc(40% - 3rem);
+            border: 1px solid var(--border);
+            padding: 3.5rem;
+            border-radius: var(--rad);
+            background: var(--bg);
+            position: sticky;
+            top: calc(var(--bottom-header) + 4rem);
+    
+            .formInner {
+                display: flex;
+                flex-wrap: wrap;
+                width: calc(100% + var(--padding) * 2);
+                margin: calc(-1 * var(--padding));
+    
+                & > * {
+                    margin: var(--padding);
+                    width: calc(var(--width) - var(--padding) * 2);
+                }
+    
+                .full {
+                    --width: 100%;
+                }
+    
+                .half {
+                    --width: 50%;
+                }
+    
+            }
+    
+        }
+
+        .products {
+            width: calc(60% - 3rem);
+            padding: 4rem 0;
+
+            .title {
+                margin-bottom: 2rem;
+            }
+
+            .list {
+                margin-top: 3rem;
+                padding-top: 3rem;
+                border-top: 1px solid var(--border);
+            }
+
+        }
+
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .section {
+
+        .formWrapper {
+            flex-direction: column-reverse;
+
+            .form {
+                width: 100%;
+                position: static;
+            }
+
+            .products {
+                width: 100%;
+                margin-bottom: 5rem;
+                padding: 0;
+            }
+
+        }
+
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+
+    .section {
+
+        .formWrapper {
+            flex-direction: column-reverse;
+
+            .form {
+                width: 100%;
+                position: static;
+            }
+
+            .products {
+                width: 100%;
+                margin-bottom: 5rem;
+                padding: 0;
+            }
+
+        }
+
+    }
+
+}

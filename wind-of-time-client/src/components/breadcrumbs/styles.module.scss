@@ -1,0 +1,35 @@
+.breadcrumbs {
+    border-bottom: 1px solid var(--border);
+    padding: 1rem 0;
+    line-height: 1.2;
+    font-size: var(--fz-smaller);
+}
+
+.inner {
+    display: flex;
+    align-items: center;
+}
+
+.link {
+    color: var(--text-grey);
+}
+
+.icon {
+    font-size: var(--fz-larger);
+}
+
+.sep {
+    color: var(--text-grey);
+    display: flex;
+    padding: 0 0.3rem;
+}
+
+a.link {
+    text-decoration: none;
+    transition: 0.2s;
+
+    &:hover {
+        color: var(--theme);
+    }
+
+}

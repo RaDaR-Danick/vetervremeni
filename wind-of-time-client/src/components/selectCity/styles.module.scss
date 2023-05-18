@@ -1,0 +1,56 @@
+.selectCity {
+    line-height: 1;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid var(--field-border);
+    height: var(--field);
+    border-radius: var(--rad);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    background: var(--field-bg);
+
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        height: 0;
+        transition: 0.3s;
+        background: var(--grey-bg);
+    }
+
+    &:hover {
+
+        &:before {
+            height: 100%;
+        }
+
+    }
+
+    .currentCity {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.1em;
+        padding: 0 1rem;
+        position: relative;
+        z-index: 1; 
+
+        .icon {
+            color: var(--theme);
+            font-size: var(--fz-larger);
+            margin-right: 0.2em;
+        }
+
+        .arrow {
+            margin-left: 0.4rem;
+            color: var(--text-grey);
+            font-size: var(--fz-smaller);
+            transform: translateY(10%);
+        }
+
+    }
+
+}

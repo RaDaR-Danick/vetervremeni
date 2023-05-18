@@ -1,0 +1,40 @@
+.section {
+    padding: 4rem 0;
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 4rem 2rem;
+    }
+
+    .loadMoreWrapper {
+        display: flex;
+        justify-content: center;
+        margin-top: 4rem;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .section {
+
+        .grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+
+    .section {
+
+        .grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+    }
+
+}
